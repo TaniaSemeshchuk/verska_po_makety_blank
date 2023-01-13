@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Company</title>
+
+    <!--Підключаємо шрифти-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!--Підключаємо стилі css-->
+    
+  </head>
+  <body>
+    <!--Верхня панель навігації-->
+    <nav class="conteiner">
+      <!--Логотип робимо як посилання.
+            Коли будемо натискати на логотип нас має перекидати на першу сторінку.
+            Якщо запишемо href="#" - це означає, що перекидає на цю саму сторінку на початок.
+            Якщо записати href="./index.html" - це означає, що перекидає на сторінку з назвою index.html
+            (у нашому випадку це головна сторінка)-->
+      <a href="./index.html" class="logo"
+        >Company<span class="sublogo">Logo</span></a
+      >
+
+      <!--Головне меню сайту.
+            Робимо через невпорядкований список, так як у нас 4 однотипні елементи.
+            Всі елементи списку будуть посиланнями, які ведуть на відповідні розділи на сторінці.
+            Тобто, коли будемо натискати на пунк меню, нас буде перекидати на початок цього розділу на сторінці.
+            Для цього використаємо посилання-якір href="#services", де # - це наш якір, 
+            a services - це імʼя нашого розділу, яке ми задаємо у самому розділі через id-->
+      <ul class="menu">
+        <li><a href="#services" class="menu-items">Services</a></li>
+        <li><a href="#advantages" class="menu-items">Advantages</a></li>
+        <li><a href="#reviews" class="menu-items">Reviews</a></li>
+        <li><a href="#contacts" class="menu-items">Contacts</a></li>
+      </ul>
+
+      <!--Контакти зверху.
+            Робимо через невпорядкований список, так як у нас 2 однотипні елементи.-->
+      <ul class="nav-contacts">
+        <!--Коли натискаємо на номер телефону повинен відразу здійснюватися дзвінок. 
+                Це називається посилання на телефонний номер-->
+        <li class="contacts-items">
+          <a href="tel:+380001112233" class="contacts-items-link">
+            <!--Перед номером телефону і поштою є іконка svg.
+                    Її всавляємо наступним способом.
+                    Тег div використовуємо, щоб був кружечок навколо іконки-->
+            <div class="border-contacts-icon">
+              <object
+                type="image/svg+xml"
+                data="mobile.svg"
+                width="16"
+                height="16"
+              >
+                <img class="icon-contacts" src="./images/mobile.svg" alt="" width="16" height="16" />
+              </object>
+            </div>
+            +38 (000) 111 22 33</a
+          >
+        </li>
+        <!--Коли натискаємо на електронну пошту повинен відразу перекидати на написання електронного листа. 
+                Це називається посилання на адресу електронної пошти.-->
+        <li>
+          <a href="mailto:company.info@company.com" class="contacts-items-link">
+            <div>
+              <object
+                type="image/svg+xml"
+                data="mail.svg"
+                width="16"
+                height="16"
+              >
+                <img class="icon-contacts" src="./images/mail.svg" alt="" width="16" height="16" />
+              </object>
+            </div>
+            company.info@company.com</a
+          >
+        </li>
+      </ul>
+    </nav>
+
+    <!--Хедер або шапка сайту.-->
+    <header>
+      <!--Текстовий заголовок сайту робимо тегом h1,
+            так як це головний заголовок на нашому сайті-->
+      <h1>Company Name</h1>
+
+      <!--Підзаголовок сайту робимо тегом h2.
+            Це також заголовок, але не такий важливий як заголовок сайту-->
+      <h2>
+        Lorem Ipsum is simply dummy text of the printing and
+        typesettingindustry. Lorem Ipsum has been the industry's standard.
+      </h2>
+
+      <!--Кнопку робимо посиланням, на яке коли натиснемо - перекине до форми.
+            Це посилання також робимо через посилання-якір.-->
+      <a href="#form">Send Message</a>
+    </header>
+
+    <!--Інформація на сторінці записується у тезі main-->
+    <main>
+      <!--Розділ Our Services.
+            Кожен розділ створюємо окремо тегом section.
+            Кожному розділу присвоюємо імʼя через id-->
+      <section id="services">
+        <!--Назву розділу створюємо через заголовок h3,
+                тому що це заголовок, а заголовкі h1 та h2 ми уже використали-->
+        <h3>Our Services</h3>
+
+        <!--Вставляємо зображення тегом img.
+                Так як у нас 4 зображення і це однотипні елементи, 
+                то використаємо невпорядкований список, 
+                де кожен елемент списку - це зображення-->
+        <ul>
+          <!--У тезі img крім атрибута src, який вказує шлях, 
+                    обовʼязково прописуємо атрибути alt (альтернативний текст), 
+                    width (ширина зображення) та height (висота зображення)-->
+          <li>
+            <img src="./images/img_1.png" alt="" width="270" height="270" />
+          </li>
+          <li>
+            <img src="./images/img_1.png" alt="" width="270" height="270" />
+          </li>
+          <li>
+            <img src="./images/img_1.png" alt="" width="270" height="270" />
+          </li>
+          <li>
+            <img src="./images/img_1.png" alt="" width="270" height="270" />
+          </li>
+        </ul>
+      </section>
+
+      <!--Розділ Why Chose Us?-->
+      <section id="advantages">
+        <h3>Why Chose Us?</h3>
+
+        <!--Робимо карточку в розділі.
+            Карточок є 4 і це однотипні елементи, тому використовуємо невпорядкований список-->
+        <ul>
+          <!--Кожен елемент списку - це карточка-->
+          <li>
+            <!--Вставляємо іконку в кружечку-->
+            <div>
+              <object
+                type="image/svg+xml"
+                data="task_done.svg"
+                width="40"
+                height="40"
+              >
+                <img
+                  src="./images/task_done.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </object>
+            </div>
+            <!--Заголовок карточки робимо тегом h4-->
+            <h4>Advantage Name</h4>
+            <!--Nекст карточки робимо абзацом - це тег p-->
+            <p>
+              Porta nibh venenatis cras sed felis eget velit aliquet sagittis id
+              consectetur purus ut.
+            </p>
+          </li>
+
+          <li>
+            <div>
+              <object
+                type="image/svg+xml"
+                data="task_done.svg"
+                width="40"
+                height="40"
+              >
+                <img
+                  src="./images/task_done.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </object>
+            </div>
+            <h4>Advantage Name</h4>
+            <p>
+              Porta nibh venenatis cras sed felis eget velit aliquet sagittis id
+              consectetur purus ut.
+            </p>
+          </li>
+
+          <li>
+            <div>
+              <object
+                type="image/svg+xml"
+                data="task_done.svg"
+                width="40"
+                height="40"
+              >
+                <img
+                  src="./images/task_done.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </object>
+            </div>
+            <h4>Advantage Name</h4>
+            <p>
+              Porta nibh venenatis cras sed felis eget velit aliquet sagittis id
+              consectetur purus ut.
+            </p>
+          </li>
+
+          <li>
+            <div>
+              <object
+                type="image/svg+xml"
+                data="task_done.svg"
+                width="40"
+                height="40"
+              >
+                <img
+                  src="./images/task_done.svg"
+                  alt=""
+                  width="40"
+                  height="40"
+                />
+              </object>
+            </div>
+            <h4>Advantage Name</h4>
+            <p>
+              Porta nibh venenatis cras sed felis eget velit aliquet sagittis id
+              consectetur purus ut.
+            </p>
+          </li>
+        </ul>
+      </section>
+
+      <!--Розділ Reviews-->
+      <section id="reviews">
+        <h3>Reviews</h3>
+
+        <!--Карточки робимо невпорядкованим списком-->
+        <ul>
+          <li>
+            <p>
+              Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu
+              cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+            </p>
+            <p>Jone Doe</p>
+          </li>
+
+          <li>
+            <p>
+              Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu
+              cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+            </p>
+            <p>Jone Doe</p>
+          </li>
+
+          <li>
+            <p>
+              Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu
+              cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+            </p>
+            <p>Jone Doe</p>
+          </li>
+
+          <li>
+            <p>
+              Nibh sit amet commodo nulla facilisi nullam vehicula ipsum a arcu
+              cursus vitae congue mauris rhoncus aenean vel elit scelerisque.
+            </p>
+            <p>Jone Doe</p>
+          </li>
+        </ul>
+      </section>
+
+      <!--Розділ Contacts-->
+      <section id="contacts">
+        <h3>Contacts</h3>
+
+        <!--Іконки з контактами зробимо невпорядкованим списком-->
+        <ul>
+          <li>
+            <div>
+              <object
+                type="image/svg+xml"
+                data="map.svg"
+                width="20"
+                height="20"
+              >
+                <img src="./images/map.svg" alt="" width="20" height="20" />
+              </object>
+              <h4>Our Office</h4>
+              <p>Ukraine, Rivne</p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <object
+                type="image/svg+xml"
+                data="phone.svg"
+                width="20"
+                height="20"
+              >
+                <img src="./images/phone.svg" alt="" width="20" height="20" />
+              </object>
+              <h4>Contact Number</h4>
+              <p>+38 (000) 111 22 33</p>
+            </div>
+          </li>
+
+          <li>
+            <div>
+              <object
+                type="image/svg+xml"
+                data="mail_2.svg"
+                width="20"
+                height="20"
+              >
+                <img src="./images/mail_2.svg" alt="" width="20" height="20" />
+              </object>
+              <h4>Email Us</h4>
+              <p>company.info@company.com</p>
+            </div>
+          </li>
+        </ul>
+
+        <!--Форма-->
+        <form id="form">
+          <!--Створюємо поле для введення тексту-->
+          <input type="text" id="name" placeholder="Name" />
+          <!--Створюємо поле для введення електронної пошти-->
+          <input type="email" id="email" placeholder="Email" />
+          <input type="text" id="subject" placeholder="Subject" /><br />
+          <!--Створюємо багаторядкове поле для введення тексту-->
+          <textarea
+            name="message"
+            row="10"
+            cols="30"
+            placeholder="Subject"
+          ></textarea
+          ><br />
+          <!--Створюємо кнопку.
+                    Коли натиснемо кнопку зʼвиться повідомлення, що лист надіслано-->
+          <button type="submit" onclick="alert('Your message has been sent!')">
+            Send Message
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <!--Футер (підвал) сайту-->
+    <footer>
+      <!--Меню підвалу.
+            Коли натискаємо на елемент меню, нас перекидає на початок відповідного розділу.
+            Маємо 4 однотипні елементи, тому робимо через невпорядкований список.-->
+      <ul>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#advantages">Advantages</a></li>
+        <li><a href="#reviews">Reviews</a></li>
+        <li><a href="#contacts">Contacts</a></li>
+      </ul>
+
+      <p>Developed By Tania Semeshchuk</p>
+    </footer>
+  </body>
+</html>
